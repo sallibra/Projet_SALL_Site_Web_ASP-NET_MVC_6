@@ -1,0 +1,14 @@
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\AvisFormation.Data.dll.config
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\AvisFormation.Data.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\AvisFormation.Data.pdb
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\EntityFramework.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\EntityFramework.xml
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\obj\Debug\AvisFormation.Data.csprojAssemblyReference.cache
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\obj\Debug\AvisFormation.Data.csproj.CoreCompileInputs.cache
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\obj\Debug\AvisFormation.Data.csproj.CopyComplete
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\obj\Debug\AvisFormation.Data.dll
+C:\Users\x666825\Desktop\Document\Formation C#\AvisFormation.Data\obj\Debug\AvisFormation.Data.pdb

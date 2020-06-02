@@ -1,0 +1,37 @@
+﻿@model AvisFormation.WebUi.Models.LaisserUnAvisViewModel
+@{
+    ViewBag.Title = "Laisser un avis sur "+Model.FormationName;
+}
+
+<div class="container" bg-white padding30>
+
+    <h2>Laisser un avis sur @Model.FormationName</h2>
+
+    @using (Html.BeginForm("SaveComment", "Avis", FormMethod.Post))
+    {
+        
+        <div class="form-group">
+            <label for="commentaire">Commentaire : </label>
+            <textarea id="commentaire" name="commentaire" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="note">Choisissez une note entre 1 et 5 (5 est la meilleure note)</label>
+            <select name="note" id="note" class="form-control" required>
+                <option>1</option>
+                <option>1.5</option>
+                <option>2</option>
+                <option>2.5</option>
+                <option>3</option>
+                <option>3.5</option>
+                <option>4</option>
+                <option>4.5</option>
+                <option>5</option>
+            </select>
+            </div>
+        <button type="submit" class="btn btn-warning">OK</button>
+            //NB: il est important de mettre type = "submit" au lieu de "buttom" car si non si vous appuyer sur le bouton il ne se passe absolument rien
+
+            <input type="hidden" value="@Model.NomSeo" name="nomSeo" id="nomSeo" />
+            }
+
+</div>

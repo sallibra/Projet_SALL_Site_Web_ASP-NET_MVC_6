@@ -1,0 +1,117 @@
+﻿@model AvisFormation.WebUi.Models.AccueilViewModel
+    @{
+        ViewBag.Title = "Accueil";
+    }
+
+@*<div class="jumbotron text-center">
+    <h1>Avis Formation</h1>
+    <p>Choisissez la meilleure formation !</p>
+</div>
+
+<div class="container text-center">
+    @foreach (var dto in Model.ListFormations)
+    {
+        <article>
+            @Html.ActionLink(dto.Formation.Nom, "DetailsFormation", "Formation", new { nomSeo = dto.Formation.NomSeo }, null)
+            <div>@dto.Note</div>
+            <div>@dto.Formation.Description</div>
+        </article>
+    }
+
+</div>
+
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<a href="/formation/asp-net-mvc">lien basique a</a>
+@Html.ActionLink("Lien action link", "DetailsFormation", "Formation", new { nomSeo = "asp-net-mvc" }, new { rel = "nofollow" })
+
+<a href="@Url.Action("DetailsFormation","Formation",new { nomSeo="asp-net-mvc"})" rel="nofollow">
+    lien complexe
+</a>*@
+
+<div class="jumbotron text-center">
+    <h1>Avis Formation</h1>
+    <p>Choisissez la meilleure formation !</p>
+</div>
+
+<div class="container">
+    @for (int i = 0; i < Model.ListFormations.Count; i++)
+    {
+        @Html.Partial("TuileFormation", Model.ListFormations[i])
+    }
+</div>
+
+
+<div class="container bg-white text-center padding30">
+    <h2>Pourquoi utiliser Avis Formation</h2>
+    <h3>Bénéfices formateur</h3>
+
+    <div class="row">
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-shopping-cart logo-small"></span>
+            <h4>Conversion</h4>
+            <p>Améliorez votre taux de conversion</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-fullscreen logo-small"></span>
+            <h4>Visibilité</h4>
+            <p>Améliorez votre visibilité</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-tree-deciduous logo-small"></span>
+            <h4>Fidélisation</h4>
+            <p>Obtenez des clients plus fidèles et engagés</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-heart-empty logo-small"></span>
+            <h4>Confiance</h4>
+            <p>Vous bénéficiez des retours d'anciens élèves pour améliorer vos produits</p>
+        </div>
+
+
+    </div>
+
+</div>
+<div class="container text-center padding30">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Professionnels de la formation, affichez notre badge sur votre site pour augmenter vos conversions !</h3>
+        </div>
+        <div class="col-md-4">
+            <div class="widget">
+                <div>
+                    Avis Elèves 4.8/5
+                    <span class="glyphicon glyphicon-star yellow"></span><spam class="glyphicon glyphicon-star yellow"></spam><spam class="glyphicon glyphicon-star yellow"></spam><spam class="glyphicon glyphicon-star yellow"></spam><spam class="glyphicon glyphicon-star yellow"></spam>
+                </div>
+                <div class="widget-bottom">
+                    Avis récoltés par AvisFormation.fr
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="container bg_white text-center padding30">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="bigpercent">85%</p>
+            <p><b>85% des internautes consultent les avis clients avant d'acheter en ligne</b></p>
+        </div>
+        <div class="col-md-3">
+            <p class="bigpercent">91%</p>
+            <p><b>91% de ceux qui lisent les avis les considèrent comme le vecteur numéro 1 dans leur décision d'achat</b></p>
+        </div>
+        <div class="col-md-3">
+            <p class="bigpercent">25%</p>
+            <p><b>+25% du taux de conversion pour les sites avec étoiles Google</b></p>
+        </div>
+        <div class="col-md-3">
+            <p class="bigpercent">80%</p>
+            <p><b>80% des avis ont une note et un commentaire positif</b></p>
+        </div>
+    </div>
+
+</div>

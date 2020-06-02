@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AvisFormationDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Formation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NomSeo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Avis" Relationship="AvisFormationDbModel.FK__Avis__IdFormatio__15502E78" FromRole="Formation" ToRole="Avis" />
+  </EntityType>
+  <EntityContainer Name="AvisEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Formation" EntityType="Self.Formation" />
+    <EntitySet Name="Personne" EntityType="AvisFormationDbModel.Personne" />
+    <EntitySet Name="Avis" EntityType="AvisFormationDbModel.Avis" />
+    <AssociationSet Name="FK__Avis__IdFormatio__15502E78" Association="AvisFormationDbModel.FK__Avis__IdFormatio__15502E78">
+      <End Role="Formation" EntitySet="Formation" />
+      <End Role="Avis" EntitySet="Avis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Avis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="Double" Nullable="false" />
+    <Property Name="IdFormation" Type="Int32" Nullable="false" />
+    <Property Name="DateAvis" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Formation" Relationship="AvisFormationDbModel.FK__Avis__IdFormatio__15502E78" FromRole="Avis" ToRole="Formation" />
+  </EntityType>
+  <Association Name="FK__Avis__IdFormatio__15502E78">
+    <End Type="AvisFormationDbModel.Formation" Role="Formation" Multiplicity="1" />
+    <End Type="AvisFormationDbModel.Avis" Role="Avis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Avis">
+        <PropertyRef Name="IdFormation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

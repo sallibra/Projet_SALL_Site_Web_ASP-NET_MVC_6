@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bc8bc878be4461995736e57809ab5e2" Name="Diagram1">
+        <EntityTypeShape EntityType="AvisFormationDbModel.Formation" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvisFormationDbModel.Personne" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AvisFormationDbModel.Avis" Width="1.5" PointX="3" PointY="0.875" />
+        <AssociationConnector Association="AvisFormationDbModel.FK__Avis__IdFormatio__15502E78" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

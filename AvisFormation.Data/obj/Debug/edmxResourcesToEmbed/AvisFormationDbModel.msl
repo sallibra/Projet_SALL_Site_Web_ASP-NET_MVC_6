@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AvisFormationDbModelStoreContainer" CdmEntityContainer="AvisEntities">
+    <EntitySetMapping Name="Formation">
+      <EntityTypeMapping TypeName="AvisFormationDbModel.Formation">
+        <MappingFragment StoreEntitySet="Formation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NomSeo" ColumnName="NomSeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personne">
+      <EntityTypeMapping TypeName="AvisFormationDbModel.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Avis">
+      <EntityTypeMapping TypeName="AvisFormationDbModel.Avis">
+        <MappingFragment StoreEntitySet="Avis">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateAvis" ColumnName="DateAvis" />
+          <ScalarProperty Name="IdFormation" ColumnName="IdFormation" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
